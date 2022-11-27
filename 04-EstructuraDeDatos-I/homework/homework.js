@@ -51,13 +51,16 @@ class Queue {
   }
 }
 var milista = new Queue
+var milistita = new Queue
 Queue.prototype.enqueue = function (a)  {this.arr.push(a) }
 Queue.prototype.dequeue = function () {return this.arr.shift()};
 Queue.prototype.size = function () { return this.arr.length};
 console.log(milista.enqueue(3))
 console.log(milista.enqueue(5));
-console.log(milista.enqueue(2));
+console.log(milistita.enqueue(2));
 console.log(milista.dequeue())
+console.log(milistita)
+//la puta madre al fin lo entendi.
 //el prototype lo que hace es almacena la funcion en el prototypo, osea el original y no lo hace en cadda instancia de la clase que creemos.
 // No modifiquen nada debajo de esta linea
 // --------------------------------
