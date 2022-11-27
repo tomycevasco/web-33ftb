@@ -1,5 +1,7 @@
 'use strict'
 
+const { queue } = require("@11ty/eleventy-cache-assets")
+
 /*
 Definir las funciones recursivas nFactorial y nFibonacci.
 
@@ -41,10 +43,22 @@ Implementar la clase Queue, sabiendo que es una estructura de tipo FIFO, donde e
 Pueden utilizar class o función constructora.
 */
 
-function Queue() {
+class Queue {
+  constructor() {
+    this.arr = [];
+   
 
+  }
 }
-
+var milista = new Queue
+Queue.prototype.enqueue = function (a)  {this.arr.push(a) }
+Queue.prototype.dequeue = function () {return this.arr.shift()};
+Queue.prototype.size = function () { return this.arr.length};
+console.log(milista.enqueue(3))
+console.log(milista.enqueue(5));
+console.log(milista.enqueue(2));
+console.log(milista.dequeue())
+//el prototype lo que hace es almacena la funcion en el prototypo, osea el original y no lo hace en cadda instancia de la clase que creemos.
 // No modifiquen nada debajo de esta linea
 // --------------------------------
 
